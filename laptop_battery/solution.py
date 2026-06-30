@@ -8,7 +8,7 @@ from sklearn.metrics import r2_score
 # -----------------------
 # Load data
 # -----------------------
-path = '/home/huzaifa/Code/tensorcode/ProblemSet/laptop_battery/Training_Set.csv'
+path = ''
 data = pd.read_csv(path)
 
 # -----------------------

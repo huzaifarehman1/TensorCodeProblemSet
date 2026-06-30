@@ -4,10 +4,9 @@ the structure is like this
         |
         statement.txt
         trainset.csv
-        testset.csv
+        X_testset.csv
+        Y_testset.csv
         solution.py
         explaination.md
-        metaData.json
-        problem.json(everything into json)
 there is a utility dir that have scripts for different data related purpose
     
