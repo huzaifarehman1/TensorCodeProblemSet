@@ -35,10 +35,28 @@ Your predictions will be evaluated using a regression metric as:
 
 ## Example
 
-| Hours_Charged | Battery_Gained |
+| Hours_Charged | target |
 |--------------|----------------|
 | 1.0          | 20             |
 | 2.0          | 40             |
 | 3.5          | 70             |
 
 If the laptop is charged for **2.5 hours**, your model should estimate the expected battery gain.
+
+## Submission
+
+After generating predictions for the test dataset:
+
+1. Create a CSV file containing **all predicted values**.
+2. Name the prediction column **`target`**.
+3. Ensure the CSV contains exactly one row per test sample, in the same order as the test data.
+
+Example:
+
+| target |
+|--------:|
+| 0.82 |
+| 1.35 |
+| 2.17 |
+
+Save the file as `submission.csv` and upload it for evaluation.

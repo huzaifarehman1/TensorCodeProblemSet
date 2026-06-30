@@ -14,25 +14,25 @@ data = pd.read_csv(path)
 # -----------------------
 # Visualization
 # -----------------------
-sns.scatterplot(data=data, x='Hours_Charged', y='Battery_Gained')
+sns.scatterplot(data=data, x='Hours_Charged', y='target')
 plt.title("Hours Charged vs Battery Gained")
 plt.show()
 
 # -----------------------
 # Find saturation point
 # -----------------------
-maximum_battery = data['Battery_Gained'].max()
+maximum_battery = data['target'].max()
 
 max_charge = data[
-    data['Battery_Gained'] == maximum_battery
+    data['target'] == maximum_battery
     ]['Hours_Charged'].min()
 
 # -----------------------
 # Remove saturation region 
 # -----------------------
-#data['Hours_Charged'] = np.clip(data[['Hours_Charged']],a_min=0,a_max=max_charge)
+data['Hours_Charged'] = np.clip(data[['Hours_Charged']],a_min=0,a_max=max_charge)
 
-sns.scatterplot(data=data, x='Hours_Charged', y='Battery_Gained')
+sns.scatterplot(data=data, x='Hours_Charged', y='target')
 plt.title("Hours Charged vs Battery Gained")
 plt.show()
 
@@ -41,7 +41,7 @@ plt.show()
 # Linear Regression
 # -----------------------
 X = data[['Hours_Charged']]
-y = data['Battery_Gained']
+y = data['target']
 
 
 model = LinearRegression()
@@ -49,11 +49,20 @@ model.fit(X, y)
 
 def predict(xx):
     
-    #xx = np.clip(xx[['Hours_Charged']],a_min=0,a_max=max_charge)
+    xx = np.clip(xx[['Hours_Charged']],a_min=0,a_max=max_charge)
     return model.predict(xx)    
-x = pd.read_csv('/home/huzaifa/Code/tensorcode/ProblemSet/laptop_battery/Test_Set.csv')
-xx = x[['Hours_Charged']]
-yy = x['Battery_Gained']
 
-g = predict(xx)
-print(r2_score(yy,g))
+# make prediction and save
+
+
+test_path = ''
+path_to_save_submission = ''
+
+testX = pd.read_csv(test_path)
+x = testX[['Hours_Charged']]
+
+
+guess = predict(x)
+
+dataframe = pd.DataFrame({'target':guess})
+dataframe.to_csv(path_to_save_submission)
