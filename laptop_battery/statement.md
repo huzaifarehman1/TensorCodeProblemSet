@@ -21,11 +21,11 @@ Given the number of hours a laptop is charged, predict the **battery percentage 
 A CSV file containing:
 
 - `Hours_Charged` — Number of hours the laptop was charged
-- `Battery_Gained` — Battery percentage gained after charging
+- `target` — Battery percentage gained after charging
 
 ## Output
 
-For each input value of `Hours_Charged`, predict the corresponding `Battery_Gained`.
+For each input value of `Hours_Charged`, predict the corresponding `target`.
 
 ## Evaluation
 

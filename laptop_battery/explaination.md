@@ -23,7 +23,7 @@ This ensures the remaining dataset follows a more consistent linear relationship
 A simple **Linear Regression** model is trained using:
 
 - Feature: `Hours_Charged`
-- Target: `Battery_Gained`
+- Target: `target`
 
 The model learns the relationship between charging duration and battery gain based on the cleaned data.
 
