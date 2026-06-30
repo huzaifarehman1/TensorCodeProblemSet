@@ -14,8 +14,8 @@ def evaluation_score(metric, min_score, max_score, pred, y):
 
     return round(score, 4), (round(score2, 4))*100
 
-path_guess = '/home/huzaifa/Code/TensorCodeProblemSet/utilities/submisions.csv'
-path_y = '/home/huzaifa/Code/TensorCodeProblemSet/laptop_battery/Y_testset.csv'
+path_guess = '/home/huzaifa/Code/TensorCodeProblemSet/utilities/sub.csv'
+path_y = '/home/huzaifa/Code/TensorCodeProblemSet/house_price/Y_testset.csv'
 data,y = get_data(path_guess,path_y)
 metric = 'r2_score'
 min = 0
