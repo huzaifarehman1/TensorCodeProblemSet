@@ -1,6 +1,6 @@
 import pandas as pd
 import os
-path= '/home/huzaifa/Code/TensorCodeProblemSet/group_score' # dir path
+path= '/home/huzaifa/Code/TensorCodeProblemSet/Cifar_classication' # dir path
 train = os.path.join(path,'Test_Set.csv')
 
 Testx = os.path.join(path,'X_testset.csv')
@@ -13,3 +13,4 @@ x,y = data.drop(columns=[target]),data[target]
 
 x.to_csv(Testx,index=False)
 y.to_csv(Testy,index=False)
+ 

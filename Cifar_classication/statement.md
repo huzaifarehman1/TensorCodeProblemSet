@@ -12,7 +12,7 @@ Your task is to build a **multi-class classification model** that learns from th
 
 ## Dataset
 
-The dataset is based on the **CIFAR-10** image dataset.
+The dataset is based on the **CIFAR-19** image dataset.
 
 Each image:
 
@@ -40,20 +40,7 @@ Your goal is to predict the missing class labels.
 
 ## Classes
 
-There are **10** possible classes:
-
-| Label | Class |
-|-------:|-------|
-| 0 | airplane |
-| 1 | automobile |
-| 2 | bird |
-| 3 | cat |
-| 4 | deer |
-| 5 | dog |
-| 6 | frog |
-| 7 | horse |
-| 8 | ship |
-| 9 | truck |
+There are **19** possible classes:
 
 ---
 
@@ -61,29 +48,22 @@ There are **10** possible classes:
 
 Submissions are evaluated using **Classification Accuracy**.
 
-\[
-\text{Accuracy}=\frac{\text{Number of Correct Predictions}}{\text{Total Number of Predictions}}
-\]
-
-Higher accuracy indicates better performance.
-
 ---
 
 ## Submission Format
 
 Your submission must be a CSV file with the following format:
 
-| ID | target |
-|---:|-------:|
-| 0 | 3 |
-| 1 | 8 |
-| 2 | 1 |
+| target |
+|------:|
+| 3 |
+| 8 |
+| 1 |
 | ... | ... |
 
 where:
 
-- `ID` is the row index from the test dataset.
-- `target` is the predicted class label (an integer from **0–9**).
+- `target` is the predicted class label (an integer from **0–19**).
 
 ---
 

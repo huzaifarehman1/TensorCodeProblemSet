@@ -3,12 +3,12 @@ import matplotlib
 matplotlib.use('TkAgg')
 import matplotlib.pyplot as plt
 import numpy as np
-path = r'/home/huzaifa/Training_Set.csv'
+path = r'/home/huzaifa/Code/TensorCodeProblemSet/Cifar_classication/Test_Set.csv'
 
 data = pd.read_csv(path)
 
 
-
+data = data['target']
 
 
 def stat(data):
@@ -30,6 +30,7 @@ def count(data):
     for i in temp:
         count_ = np.count_nonzero([data.values == i])
         print(f'{i} => total {count_} times')
+count(data)        
 for i in data.columns:
     new = data[i]
     print(i)
