@@ -3,9 +3,10 @@ import matplotlib
 matplotlib.use('TkAgg')
 import matplotlib.pyplot as plt
 import numpy as np
-path = r'/home/huzaifa/Code/TensorCodeProblemSet/MNIST_classifier/Training_Set.csv'
+path = r'/home/huzaifa/Code/TensorCodeProblemSet/News_classify/Test_Set.csv'
 
-data = pd.read_csv(path)['target']
+data = pd.read_csv(path)
+data = data['target']
 
 
 

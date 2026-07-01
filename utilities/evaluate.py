@@ -14,10 +14,10 @@ def evaluation_score(metric, min_score, max_score, pred, y):
 
     return round(score, 4), (round(score2, 4))*100
 path_guess = '/home/huzaifa/Code/TensorCodeProblemSet/submission.csv'
-path_y = '/home/huzaifa/Code/TensorCodeProblemSet/MNIST_classifier/Y_testset.csv'
+path_y = '/home/huzaifa/Code/TensorCodeProblemSet/climate_prediction/Y_testset.csv'
 data,y = get_data(path_guess,path_y)
-metric = 'accuracy_score'
-min = 0
+metric = 'r2_score'
+min = -1
 max = 1
 print(evaluation_score(metric,max_score=max,min_score=min,pred=data,y=y))
 
