@@ -1,3 +1,4 @@
 utilities/datamaker.py
 submission.csv
 cifar-10-python.tar.gz
+utilities/spliter.py
