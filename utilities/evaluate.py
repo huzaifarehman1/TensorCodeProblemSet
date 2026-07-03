@@ -10,15 +10,14 @@ def evaluation_score(metric, min_score, max_score, pred, y):
     metric_fn = getattr(metrics, metric)
 
     score = metric_fn(y, pred)   # y_true first, predictions second
-    score = 0.85
     score2 = (score - min_score) / (max_score - min_score)
 
     return round(score, 4), (round(score2, 4))*100
 path_guess = '/home/huzaifa/Code/TensorCodeProblemSet/submission.csv'
-path_y = '/home/huzaifa/Code/TensorCodeProblemSet/Benin_NOAI/Y_testset.csv'
+path_y = '/home/huzaifa/Code/TensorCodeProblemSet/Obesity_risk/Y_testset.csv'
 data,y = get_data(path_guess,path_y)
-metric = 'roc_auc_score'
-min = -1
+metric = 'r2_score'
+min = 0
 max = 1
 print(evaluation_score(metric,max_score=max,min_score=min,pred=data,y=y))
 
