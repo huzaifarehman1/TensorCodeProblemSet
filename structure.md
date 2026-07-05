@@ -3,7 +3,7 @@ the structure is like this
     problemName(Dir)
         |
         statement.md
-        trainset.csv
+        Training_Set.csv
         X_testset.csv
         Y_testset.csv
         Test_Set.csv (use spliter function in utilites to make X_testset and Y_testset)
