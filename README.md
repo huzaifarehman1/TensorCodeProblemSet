@@ -6,4 +6,4 @@ This repository serves as the secondary database for [TensorCode](tensorcode.net
 
 ## Problemsets 
 
-Each problemset has its own csv and .md files.
+Each problemset has its own **.csv** and **.md** files.
