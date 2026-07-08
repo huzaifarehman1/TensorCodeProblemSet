@@ -1,6 +1,6 @@
 import pandas as pd
 import os
-path= '/home/huzaifa/Code/TensorCodeProblemSet/letter_decoder 2' # dir path
+path= '/home/huzaifa/Code/TensorCodeProblemSet/Space_hits' # dir path
 train = os.path.join(path,'Test_Set.csv')
 
 Testx = os.path.join(path,'X_testset.csv')
