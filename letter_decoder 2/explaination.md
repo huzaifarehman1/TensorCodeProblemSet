@@ -159,7 +159,7 @@ For every possible letter, we find the best value of \(a\).
 
 We want:
 
-
+ 
 ||y-a(f_i)||^2
 
 
